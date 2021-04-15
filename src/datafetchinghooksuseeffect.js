@@ -7,6 +7,9 @@ export default function datafetchinghooksuseeffect() {
         fetch("http://localhost:8000//api/users/")
         .then(response => response.json())
         .then(data => setData(data));
+
+
+        return () => socket.disconnect();
         
 
     });
